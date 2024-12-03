@@ -8,7 +8,6 @@ resource "genesyscloud_telephony_providers_edges_site" "METR_PARIS_BIOME" {
       outbound_routes
     ]
   }*/
-
   location_id                     = "${genesyscloud_location.METR_PARIS_BIOME.id}"
   media_model                     = "Cloud"
   media_regions_use_latency_based = true
