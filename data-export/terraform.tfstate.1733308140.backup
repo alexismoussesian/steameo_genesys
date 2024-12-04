@@ -1,7 +1,7 @@
 {
   "version": 4,
   "terraform_version": "1.10.0",
-  "serial": 1,
+  "serial": 0,
   "lineage": "ef72c2ed-4ea7-a567-d45f-63ba78020465",
   "outputs": {},
   "resources": [
@@ -9,7 +9,7 @@
       "mode": "data",
       "type": "genesyscloud_telephony_providers_edges_site",
       "name": "PureCloud_Voice_-_AWS",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -25,7 +25,7 @@
       "mode": "managed",
       "type": "genesyscloud_auth_division",
       "name": "Home",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -43,7 +43,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration",
       "name": "Genesys_Cloud_Data_Actions_-_Internal",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -67,7 +67,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration",
       "name": "LBP_API_securisee__header_standard_authorization_",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -90,7 +90,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration",
       "name": "STEAMEO_BOUCHON",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -113,7 +113,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Disconnect_Interaction",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -144,7 +144,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Get_Available_Users_2005021615",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -179,7 +179,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Get_LastAgentRouting_647297189",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -215,7 +215,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Get_MessageId_2999360152",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -249,7 +249,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Get_User_Info_2834611629",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -295,7 +295,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Get_User_Info_from_userId",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -341,7 +341,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Get_User_Presence_3322095254",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -375,7 +375,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Reiteration_164546742",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -409,7 +409,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_Update_attributes_758851900",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -440,7 +440,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC_-_update_wrapup_code_532406871",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -471,7 +471,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC___Assign_conversation_to_user_785820410",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -502,7 +502,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "GC___Get_all_emails_from_aliasId_2645201753",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -537,7 +537,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "LBP_-_AuthentifierClient",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -568,7 +568,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "LBP_-_BOUCHON_-_AuthentifierClient",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -599,7 +599,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "LBP_-_FinaliserInteractionCentreAppels",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -630,7 +630,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "LBP_-_ModifierMotDePasse",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -661,7 +661,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "LBP_-_TraiterInteractionCentreAppels",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -692,7 +692,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "LBP_RouterInteractionVoix",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -723,7 +723,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_action",
       "name": "LBP_RouterInteractionVoix__bouchon_",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -755,7 +755,7 @@
       "mode": "managed",
       "type": "genesyscloud_integration_credential",
       "name": "Integration-3f6d90e6-18aa-4956-b952-56ce28b96be4",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -772,7 +772,7 @@
       "mode": "managed",
       "type": "genesyscloud_location",
       "name": "Default_PCV_Location",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -800,7 +800,7 @@
       "mode": "managed",
       "type": "genesyscloud_location",
       "name": "METR_LILLE",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -828,7 +828,7 @@
       "mode": "managed",
       "type": "genesyscloud_location",
       "name": "METR_PARIS",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -856,7 +856,7 @@
       "mode": "managed",
       "type": "genesyscloud_location",
       "name": "METR_PARIS_BIOME",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -884,7 +884,7 @@
       "mode": "managed",
       "type": "genesyscloud_routing_queue",
       "name": "MEL_SQO_DSRC",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -973,7 +973,7 @@
       "mode": "managed",
       "type": "genesyscloud_routing_queue",
       "name": "SQO",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1062,7 +1062,7 @@
       "mode": "managed",
       "type": "genesyscloud_routing_queue",
       "name": "TEL_PREMIUM_DSRC",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1155,7 +1155,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_site",
       "name": "METR_PARIS_BIOME",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1241,7 +1241,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_trunkbasesettings",
       "name": "Cloud_Proxy_Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1262,7 +1262,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_trunkbasesettings",
       "name": "Direct_Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1283,7 +1283,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_trunkbasesettings",
       "name": "Genesys_Cloud_-_CDM_SIP_Phone_Trunk",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1304,7 +1304,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_trunkbasesettings",
       "name": "Genesys_Cloud_-_CDM_WebRTC_Phone_Trunk",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1325,7 +1325,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_trunkbasesettings",
       "name": "Indirect_Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1346,7 +1346,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_trunkbasesettings",
       "name": "PureCloud_Voice_-_AWS",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1367,7 +1367,7 @@
       "mode": "managed",
       "type": "genesyscloud_telephony_providers_edges_trunkbasesettings",
       "name": "Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1388,7 +1388,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "alexis_moussesian2_genesys_com",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1423,7 +1423,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "daniel_pieruzzini_genesys_com",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1454,7 +1454,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "dimitri_evanghelou_genesys_com",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1485,7 +1485,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "matthieu_frys-prestataire_labanquepostale_fr",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1516,7 +1516,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "matthieu_frys_genesys_com",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1547,7 +1547,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "thomas_nicolas_genesys_com",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1578,7 +1578,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "vincent_descorps_labanquepostale_fr",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,
@@ -1609,7 +1609,7 @@
       "mode": "managed",
       "type": "genesyscloud_user",
       "name": "youcef_teldjoune_genesys_com",
-      "provider": "provider[\"registry.terraform.io/mypurecloud/genesyscloud\"]",
+      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
       "instances": [
         {
           "schema_version": 1,

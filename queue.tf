@@ -1,4 +1,10 @@
 resource "genesyscloud_routing_queue" "SQO" {
+  lifecycle {
+    ignore_changes = [
+      members
+    ]
+  }
+
   scoring_method                   = "TimestampAndPriority"
   suppress_in_queue_call_recording = true
   acw_wrapup_prompt                = "OPTIONAL"
@@ -49,6 +55,11 @@ resource "genesyscloud_routing_queue" "SQO" {
 }
 
 resource "genesyscloud_routing_queue" "MEL_SQO_DSRC" {
+  lifecycle {
+    ignore_changes = [
+      members
+    ]
+  }
   acw_wrapup_prompt       = "OPTIONAL"
   enable_audio_monitoring = false
   media_settings_chat {
@@ -99,6 +110,11 @@ resource "genesyscloud_routing_queue" "MEL_SQO_DSRC" {
 }
 
 resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
+  lifecycle {
+    ignore_changes = [
+      members
+    ]
+  }
   suppress_in_queue_call_recording = true
   enable_transcription             = false
   division_id                      = "${genesyscloud_auth_division.Home.id}"
@@ -119,14 +135,14 @@ resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
     service_level_percentage  = 0.8
     alerting_timeout_sec      = 30
   }
-  members {
+  /*members {
     ring_num = 1
     user_id  = "${genesyscloud_user.dimitri_evanghelou_genesys_com.id}"
   }
   members {
     ring_num = 1
     user_id  = "${genesyscloud_user.thomas_nicolas_genesys_com.id}"
-  }
+  }*/
   media_settings_call {
     alerting_timeout_sec      = 8
     enable_auto_answer        = false
