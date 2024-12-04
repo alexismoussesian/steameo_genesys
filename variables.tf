@@ -42,3 +42,8 @@ variable "routing_queue_alerting_timeout_sec" {
   type = number
   default = 20
 }
+
+variable "routing_queue_service_level_percentage" {
+  type = number
+  default = 0.8
+}

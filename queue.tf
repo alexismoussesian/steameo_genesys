@@ -20,13 +20,13 @@ resource "genesyscloud_routing_queue" "SQO" {
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
     alerting_timeout_sec      = var.routing_queue_alerting_timeout_sec
   }
   media_settings_callback {
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
     alerting_timeout_sec      = 30
     auto_dial_delay_seconds   = 300
     auto_end_delay_seconds    = 300
@@ -36,7 +36,7 @@ resource "genesyscloud_routing_queue" "SQO" {
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 86400000
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
     alerting_timeout_sec      = 300
   }
 }
@@ -63,7 +63,7 @@ resource "genesyscloud_routing_queue" "MEL_SQO_DSRC" {
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
     alerting_timeout_sec      = var.routing_queue_alerting_timeout_sec
   }
   media_settings_callback {
@@ -71,12 +71,12 @@ resource "genesyscloud_routing_queue" "MEL_SQO_DSRC" {
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
     alerting_timeout_sec      = 30
     auto_dial_delay_seconds   = 300
   }
   media_settings_email {
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
     alerting_timeout_sec      = 300
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
@@ -107,10 +107,10 @@ resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
   }
   media_settings_callback {
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
     alerting_timeout_sec      = 30
     auto_dial_delay_seconds   = 300
     auto_end_delay_seconds    = 300
@@ -123,7 +123,7 @@ resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 86400000
-    service_level_percentage  = 0.8
+    service_level_percentage  = var.routing_queue_service_level_percentage
   }
 }
 
