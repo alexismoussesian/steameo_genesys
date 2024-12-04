@@ -4,7 +4,6 @@ resource "genesyscloud_routing_queue" "SQO" {
       members
     ]
   }
-
   scoring_method                   = "TimestampAndPriority"
   suppress_in_queue_call_recording = true
   acw_wrapup_prompt                = "OPTIONAL"
@@ -33,7 +32,7 @@ resource "genesyscloud_routing_queue" "SQO" {
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
     service_level_percentage  = 0.8
-    alerting_timeout_sec      = 8
+    alerting_timeout_sec      = routing_queue_alerting_timeout_sec
   }
   name        = "SQO"
   division_id = "${genesyscloud_auth_division.Home.id}"
@@ -96,7 +95,7 @@ resource "genesyscloud_routing_queue" "MEL_SQO_DSRC" {
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
     service_level_percentage  = 0.8
-    alerting_timeout_sec      = 8
+    alerting_timeout_sec      = routing_queue_alerting_timeout_sec
   }
   media_settings_callback {
     auto_end_delay_seconds    = 300
@@ -112,7 +111,9 @@ resource "genesyscloud_routing_queue" "MEL_SQO_DSRC" {
 resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
   lifecycle {
     ignore_changes = [
-      members
+      members,
+      media_settings_message,
+      media_settings_chat
     ]
   }
   suppress_in_queue_call_recording = true
@@ -128,23 +129,8 @@ resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
   }
-  media_settings_chat {
-    enable_auto_answer        = false
-    enable_auto_dial_and_end  = false
-    service_level_duration_ms = 20000
-    service_level_percentage  = 0.8
-    alerting_timeout_sec      = 30
-  }
-  /*members {
-    ring_num = 1
-    user_id  = "${genesyscloud_user.dimitri_evanghelou_genesys_com.id}"
-  }
-  members {
-    ring_num = 1
-    user_id  = "${genesyscloud_user.thomas_nicolas_genesys_com.id}"
-  }*/
   media_settings_call {
-    alerting_timeout_sec      = 8
+    alerting_timeout_sec      = routing_queue_alerting_timeout_sec
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
     service_level_duration_ms = 20000
@@ -163,12 +149,5 @@ resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
   auto_answer_only         = false
   enable_audio_monitoring  = false
   enable_manual_assignment = false
-  media_settings_message {
-    enable_auto_answer        = false
-    enable_auto_dial_and_end  = false
-    service_level_duration_ms = 20000
-    service_level_percentage  = 0.8
-    alerting_timeout_sec      = 30
-  }
 }
 

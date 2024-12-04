@@ -37,3 +37,8 @@ variable "oauthClientId_ASSE" {
 variable "oauthClientSecret_ASSE" {
     description = "Client Secret for the Genesys Cloud CX Org"
 }
+
+variable "routing_queue_alerting_timeout_sec" {
+  type = number
+  default = 20
+}
