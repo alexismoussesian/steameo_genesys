@@ -38,6 +38,7 @@ resource "genesyscloud_tf_export" "full_export" {
                                   "genesyscloud_telephony_providers_edges_trunkbasesettings",
                                   "genesyscloud_integration",
                                   "genesyscloud_integration_action",
+                                  "genesyscloud_routing_wrapupcode",
                                   "genesyscloud_routing_skill"]
   include_state_file = true
   export_as_hcl = true

@@ -2,7 +2,7 @@
   "version": 4,
   "terraform_version": "1.10.0",
   "serial": 0,
-  "lineage": "ef72c2ed-4ea7-a567-d45f-63ba78020465",
+  "lineage": "d83e02f9-bda3-7871-ea79-045571a3c51a",
   "outputs": {},
   "resources": [
     {
@@ -202,10 +202,10 @@
             "config_timeout_seconds": "0",
             "contract_input": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"additionalProperties\":true,\"description\":\"Fields needed in the body of the POST to create a query.\",\"properties\":{\"CustomerPhoneNumber\":{\"description\":\"Phone number in E.164 format\",\"type\":\"string\"},\"Interval\":{\"description\":\"Specifies the date and time range of data being queried. Results will include conversations that both started on a day touched by the interval AND either started, ended, or any activity during the interval. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\",\"type\":\"string\"}},\"required\":[\"Interval\",\"CustomerPhoneNumber\"],\"title\":\"Query for last  inbound/outbound voice conversation related to a phone number.\",\"type\":\"object\"}",
             "contract_output": "{\"additionalProperties\":true,\"properties\":{\"conversationId\":{\"description\":\"String array of conversationIds\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"userId\":{\"description\":\"String array of userIds\",\"items\":{\"type\":\"string\"},\"type\":\"array\"}},\"title\":\"List of last userIds / conversationIds ordered conversationStart desc\",\"type\":\"object\"}",
-            "id": "custom_-_05ca5db3-67d6-4192-afb1-01fe17a8926c",
+            "id": "custom_-_88ad423d-2b65-4b3f-805c-3323c15074e3",
             "integration_id": "3f6d90e6-18aa-4956-b952-56ce28b96be4",
             "name": "GC - Get LastAgentRouting",
-            "secure": "false"
+            "secure": "true"
           },
           "sensitive_attributes": []
         }
@@ -236,10 +236,10 @@
             "config_timeout_seconds": "0",
             "contract_input": "{\"additionalProperties\":true,\"properties\":{\"conversationId\":{\"type\":\"string\"}},\"type\":\"object\"}",
             "contract_output": "{\"additionalProperties\":true,\"properties\":{\"messageId\":{\"type\":\"string\"}},\"type\":\"object\"}",
-            "id": "custom_-_81d85711-34fd-4d3a-a91b-d1867a735492",
+            "id": "custom_-_19e58c19-df74-459f-b72f-7b7102a7d7f7",
             "integration_id": "3f6d90e6-18aa-4956-b952-56ce28b96be4",
             "name": "GC - Get MessageId",
-            "secure": "true"
+            "secure": "false"
           },
           "sensitive_attributes": []
         }
@@ -282,10 +282,10 @@
             "config_timeout_seconds": "0",
             "contract_input": "{\"additionalProperties\":true,\"properties\":{\"employeeNumber\":{\"type\":\"string\"}},\"type\":\"object\"}",
             "contract_output": "{\"additionalProperties\":true,\"properties\":{\"department\":{\"type\":\"string\"},\"displayName\":{\"type\":\"string\"},\"division\":{\"type\":\"string\"},\"state\":{\"type\":\"boolean\"},\"title\":{\"type\":\"string\"},\"userEmail\":{\"type\":\"string\"},\"userId\":{\"type\":\"string\"}},\"type\":\"object\"}",
-            "id": "custom_-_d735e8c2-261d-45e0-b2e3-43d1b92c025b",
+            "id": "custom_-_4bc8e59f-6752-48e1-a3ed-ebc9993ef900",
             "integration_id": "3f6d90e6-18aa-4956-b952-56ce28b96be4",
             "name": "GC - Get User Info",
-            "secure": "false"
+            "secure": "true"
           },
           "sensitive_attributes": []
         }
@@ -362,10 +362,10 @@
             "config_timeout_seconds": "0",
             "contract_input": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"additionalProperties\":true,\"description\":\"A user ID-based request.\",\"properties\":{\"USER_ID\":{\"description\":\"The user ID.\",\"type\":\"string\"}},\"required\":[\"USER_ID\"],\"title\":\"UserIdRequest\",\"type\":\"object\"}",
             "contract_output": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"additionalProperties\":true,\"description\":\"Returns a user’s presence.\",\"properties\":{\"presence\":{\"description\":\"The user’s presence, which indicates whether the user can be reached.\",\"type\":\"string\"}},\"title\":\"Get User Presence Response\",\"type\":\"object\"}",
-            "id": "custom_-_e2178463-b1c2-4bd8-b276-2b7375372244",
+            "id": "custom_-_38de674d-7be5-4e21-bf06-032319c2716f",
             "integration_id": "3f6d90e6-18aa-4956-b952-56ce28b96be4",
             "name": "GC - Get User Presence",
-            "secure": "true"
+            "secure": "false"
           },
           "sensitive_attributes": []
         }
@@ -427,10 +427,10 @@
             "config_timeout_seconds": "0",
             "contract_input": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"additionalProperties\":true,\"description\":\"A Participant ID-based request.\",\"properties\":{\"conversationId\":{\"description\":\"the address from\",\"type\":\"string\"},\"participantd\":{\"description\":\"The interval in format 2024-09-01T00:00:00.000Z/2024-09-30T22:00:00.000Z\",\"type\":\"string\"}},\"required\":[\"conversationId\"],\"type\":\"object\"}",
             "contract_output": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"additionalProperties\":true,\"properties\":{\"success\":{\"type\":\"boolean\"}},\"type\":\"object\"}",
-            "id": "custom_-_a3efe19a-992d-4753-97fb-a979daa82f64",
+            "id": "custom_-_d00f8a3f-3fc4-4d82-9335-30592a9156e9",
             "integration_id": "3f6d90e6-18aa-4956-b952-56ce28b96be4",
             "name": "GC - Update attributes",
-            "secure": "true"
+            "secure": "false"
           },
           "sensitive_attributes": []
         }
@@ -524,10 +524,10 @@
             "config_timeout_seconds": "0",
             "contract_input": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"additionalProperties\":true,\"description\":\"A Participant ID-based request.\",\"properties\":{\"FROM\":{\"description\":\"the address from\",\"type\":\"string\"},\"INTERVAL\":{\"description\":\"The interval in format 2024-10-01T00:00:00.000Z/2024-10-30T22:00:00.000Z\",\"type\":\"string\"},\"QUEUE_ID\":{\"type\":\"string\"}},\"required\":[\"FROM\"],\"type\":\"object\"}",
             "contract_output": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"additionalProperties\":true,\"properties\":{\"conversationId\":{\"items\":{\"title\":\"Item 1\",\"type\":\"string\"},\"type\":\"array\"},\"participantId\":{\"items\":{\"title\":\"Item 1\",\"type\":\"string\"},\"type\":\"array\"}},\"type\":\"object\"}",
-            "id": "custom_-_c4d41512-124e-43a0-986e-0415d9060038",
+            "id": "custom_-_d32987d9-bee6-4bb7-a574-ca635773c4df",
             "integration_id": "3f6d90e6-18aa-4956-b952-56ce28b96be4",
             "name": "GC – Get all emails from aliasId",
-            "secure": "true"
+            "secure": "false"
           },
           "sensitive_attributes": []
         }
@@ -578,7 +578,7 @@
             "config_request.0.headers.%": "0",
             "config_request.0.request_template": "${input.rawRequest}",
             "config_request.0.request_type": "POST",
-            "config_request.0.request_url_template": "https://steameo.proxy.beeceptor.com/disfe/edge/experience-ioad/hi9/v1/authentification-client",
+            "config_request.0.request_url_template": "https://steameo.proxy.beeceptor.com/v1/authentification-client",
             "config_response.#": "1",
             "config_response.0.success_template": "${rawResult}",
             "config_response.0.translation_map.%": "0",
@@ -589,37 +589,6 @@
             "id": "custom_-_43dbaf73-9399-4872-9fa3-8395f2c723eb",
             "integration_id": "488afa39-86d4-487d-b540-8f123e87212f",
             "name": "LBP - BOUCHON - AuthentifierClient",
-            "secure": "false"
-          },
-          "sensitive_attributes": []
-        }
-      ]
-    },
-    {
-      "mode": "managed",
-      "type": "genesyscloud_integration_action",
-      "name": "LBP_-_FinaliserInteractionCentreAppels",
-      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
-      "instances": [
-        {
-          "schema_version": 1,
-          "attributes_flat": {
-            "category": "LBP API securisee (header standard authorization)",
-            "config_request.#": "1",
-            "config_request.0.headers.%": "0",
-            "config_request.0.request_template": "${input.rawRequest}",
-            "config_request.0.request_type": "GET",
-            "config_request.0.request_url_template": "/v1/interaction/mail/finaliser",
-            "config_response.#": "1",
-            "config_response.0.success_template": "${rawResult}",
-            "config_response.0.translation_map.%": "0",
-            "config_response.0.translation_map_defaults.%": "0",
-            "config_timeout_seconds": "0",
-            "contract_input": "{\"additionalProperties\":true,\"properties\":{\"idConversation\":{\"type\":\"string\"}},\"required\":[\"idConversation\"],\"type\":\"object\"}",
-            "contract_output": "{\"additionalProperties\":true,\"properties\":{},\"type\":\"object\"}",
-            "id": "custom_-_a9fea062-680a-4f99-b787-4616a292a6a1",
-            "integration_id": "e9ce70cf-0991-40bb-8836-01cf765732b2",
-            "name": "LBP - FinaliserInteractionCentreAppels",
             "secure": "false"
           },
           "sensitive_attributes": []
@@ -652,37 +621,6 @@
             "integration_id": "e9ce70cf-0991-40bb-8836-01cf765732b2",
             "name": "LBP - ModifierMotDePasse",
             "secure": "true"
-          },
-          "sensitive_attributes": []
-        }
-      ]
-    },
-    {
-      "mode": "managed",
-      "type": "genesyscloud_integration_action",
-      "name": "LBP_-_TraiterInteractionCentreAppels",
-      "provider": "provider[\"registry.terraform.io/-/genesyscloud\"]",
-      "instances": [
-        {
-          "schema_version": 1,
-          "attributes_flat": {
-            "category": "Web Services Data Actions",
-            "config_request.#": "1",
-            "config_request.0.headers.%": "0",
-            "config_request.0.request_template": "${input.rawRequest}",
-            "config_request.0.request_type": "GET",
-            "config_request.0.request_url_template": "/apps/traiterinteractionscentreappels",
-            "config_response.#": "1",
-            "config_response.0.success_template": "${rawResult}",
-            "config_response.0.translation_map.%": "0",
-            "config_response.0.translation_map_defaults.%": "0",
-            "config_timeout_seconds": "0",
-            "contract_input": "{\"additionalProperties\":true,\"properties\":{\"aliasIDCient\":{\"type\":\"string\"},\"codeFonctionnel\":{\"type\":\"string\"},\"codeMotif\":{\"type\":\"string\"},\"dateDebutInteraction\":{\"type\":\"string\"},\"direction\":{\"type\":\"string\"},\"disconnectType\":{\"type\":\"string\"},\"idCompetenceCourant\":{\"type\":\"string\"},\"idCoversation\":{\"type\":\"string\"},\"idMessageStp\":{\"type\":\"string\"},\"idQueueCourant\":{\"type\":\"string\"},\"libelleCompetenceCourant\":{\"type\":\"string\"},\"libelleMotif\":{\"type\":\"string\"},\"libelleQueueCourant\":{\"type\":\"string\"}},\"required\":[\"aliasIDCient\",\"idMessageStp\",\"idCoversation\",\"direction\"],\"type\":\"object\"}",
-            "contract_output": "{\"additionalProperties\":true,\"properties\":{\"ageClient\":{\"type\":\"integer\"},\"codeEngagement\":{\"type\":\"string\"},\"codeFgr\":{\"type\":\"string\"},\"codeFonctionnel\":{\"type\":\"string\"},\"codeMarche\":{\"type\":\"string\"},\"codeMotif\":{\"type\":\"string\"},\"codeMotifRa\":{\"type\":\"string\"},\"dateOuvertureFgr\":{\"type\":\"string\"},\"idCfClient\":{\"type\":\"string\"},\"idEntiteRa\":{\"type\":\"string\"},\"idrhConseillerPrefere\":{\"type\":\"string\"},\"idrhGestionnaireRisque\":{\"type\":\"string\"},\"libelleMotif\":{\"type\":\"string\"},\"libelleMotifRa\":{\"type\":\"string\"},\"telEntiteRa\":{\"type\":\"string\"},\"topClientLbpcs\":{\"type\":\"boolean\"},\"topLac\":{\"type\":\"boolean\"},\"topMajPro\":{\"type\":\"boolean\"},\"topPpe\":{\"type\":\"boolean\"},\"typeClient\":{\"type\":\"string\"}},\"type\":\"object\"}",
-            "id": "custom_-_7c371eb2-0c9b-47a9-b83f-9940fd12c959",
-            "integration_id": "e9ce70cf-0991-40bb-8836-01cf765732b2",
-            "name": "LBP - TraiterInteractionCentreAppels",
-            "secure": "false"
           },
           "sensitive_attributes": []
         }
@@ -907,7 +845,7 @@
             "groups.#": "0",
             "id": "964d8a41-cf71-426e-9fa6-b45025b788bb",
             "media_settings_call.#": "1",
-            "media_settings_call.0.alerting_timeout_sec": "8",
+            "media_settings_call.0.alerting_timeout_sec": "20",
             "media_settings_call.0.auto_dial_delay_seconds": "0",
             "media_settings_call.0.auto_end_delay_seconds": "0",
             "media_settings_call.0.enable_auto_answer": "false",
@@ -946,7 +884,9 @@
             "media_settings_message.0.enable_auto_dial_and_end": "false",
             "media_settings_message.0.service_level_duration_ms": "20000",
             "media_settings_message.0.service_level_percentage": "0.8",
-            "members.#": "0",
+            "members.#": "1",
+            "members.242634436.ring_num": "1",
+            "members.242634436.user_id": "6c7bc1a3-1227-4a29-8b04-ba4874b0eb3f",
             "message_in_queue_flow_id": "",
             "name": "MEL_SQO_DSRC",
             "on_hold_prompt_id": "",
@@ -996,7 +936,7 @@
             "groups.#": "0",
             "id": "4d6feb0f-efe8-4dae-9c3e-3736a1f609c9",
             "media_settings_call.#": "1",
-            "media_settings_call.0.alerting_timeout_sec": "8",
+            "media_settings_call.0.alerting_timeout_sec": "20",
             "media_settings_call.0.auto_dial_delay_seconds": "0",
             "media_settings_call.0.auto_end_delay_seconds": "0",
             "media_settings_call.0.enable_auto_answer": "false",
@@ -1085,7 +1025,7 @@
             "groups.#": "0",
             "id": "e1d73841-4d5e-442f-a951-ef7f52e3b215",
             "media_settings_call.#": "1",
-            "media_settings_call.0.alerting_timeout_sec": "8",
+            "media_settings_call.0.alerting_timeout_sec": "20",
             "media_settings_call.0.auto_dial_delay_seconds": "0",
             "media_settings_call.0.auto_end_delay_seconds": "0",
             "media_settings_call.0.enable_auto_answer": "false",

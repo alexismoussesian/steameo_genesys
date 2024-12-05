@@ -38,6 +38,11 @@ variable "oauthClientSecret_ASSE" {
     description = "Client Secret for the Genesys Cloud CX Org"
 }
 
+variable "wrapupcode_supprimer_enregistrement_ASSE" {
+  type = string
+  default = "19164fd1-d02a-41c6-9281-f46c412cdf4f"
+}
+
 variable "routing_queue_alerting_timeout_sec" {
   type = number
   default = 20

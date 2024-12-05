@@ -1,13 +1,25 @@
 resource "genesyscloud_integration" "Genesys_Cloud_Data_Actions_-_Internal" {
+  integration_type = "purecloud-data-actions"
+  intended_state   = "ENABLED"
   config {
-    properties = jsonencode({		})
-    advanced   = jsonencode({		})
+    advanced = jsonencode({		})
     credentials = {
       pureCloudOAuthClient = "${genesyscloud_integration_credential.Integration-3f6d90e6-18aa-4956-b952-56ce28b96be4.id}"
     }
-    name = "Genesys Cloud Data Actions - Internal"
+    name       = "Genesys Cloud Data Actions - Internal"
+    properties = jsonencode({		})
   }
-  integration_type = "purecloud-data-actions"
+}
+
+resource "genesyscloud_integration" "STEAMEO_BOUCHON" {
+  config {
+    properties = jsonencode({
+			"clientCertificateAuthority": "Genesys Cloud"
+		})
+    advanced   = jsonencode({		})
+    name       = "STEAMEO BOUCHON"
+  }
+  integration_type = "custom-rest-actions"
   intended_state   = "ENABLED"
 }
 
@@ -21,17 +33,5 @@ resource "genesyscloud_integration" "LBP_API_securisee__header_standard_authoriz
   }
   integration_type = "custom-rest-actions"
   intended_state   = "DISABLED"
-}
-
-resource "genesyscloud_integration" "STEAMEO_BOUCHON" {
-  config {
-    name       = "STEAMEO BOUCHON"
-    properties = jsonencode({
-			"clientCertificateAuthority": "Genesys Cloud"
-		})
-    advanced   = jsonencode({		})
-  }
-  integration_type = "custom-rest-actions"
-  intended_state   = "ENABLED"
 }
 
