@@ -62,6 +62,12 @@ variable "oauthClientSecret_PROD" {
     description = "Client Secret for the Genesys Cloud CX Org on PROD"
 }
 
+# Ajout d'une variable pour le chemin du fichier CSV
+variable "numero_appele_csv_path" {
+  type    = string
+  default = "./csv/asse/TEL_ROUTAGE_NUMERO_APPELE.csv"  # Spécifiez le chemin du fichier CSV ici
+}
+
 variable "routing_queue_alerting_timeout_sec" {
   type = number
   default = 20

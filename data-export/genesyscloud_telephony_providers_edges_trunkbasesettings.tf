@@ -1,117 +1,4 @@
-resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Cloud_Proxy_Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09" {
-  state              = "active"
-  managed            = false
-  name               = "Cloud Proxy Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
-  properties         = jsonencode({
-		"trunk_diagnostic_ca_recording_enabled": {
-				"value": {
-						"instance": false
-				}
-		},
-		"trunk_diagnostic_kws_recording_enabled": {
-				"value": {
-						"instance": false
-				}
-		},
-		"trunk_diagnostic_kws_recording_percentage": {
-				"value": {
-						"instance": 100
-				}
-		},
-		"trunk_diagnostic_recognizer_recording_enabled": {
-				"value": {
-						"instance": false
-				}
-		},
-		"trunk_diagnostic_recognizer_recording_percentage": {
-				"value": {
-						"instance": 100
-				}
-		},
-		"trunk_diagnostic_recognizer_recording_type": {
-				"value": {
-						"instance": "Basic"
-				}
-		},
-		"trunk_fax_ecm": {
-				"value": {
-						"instance": true
-				}
-		},
-		"trunk_fax_speed": {
-				"value": {
-						"instance": 14400
-				}
-		},
-		"trunk_fax_transmit_headerFormat": {
-				"value": {
-						"instance": "TX Date: %m/%d/%y %I:%M:%S %p  From: %l  To: %r    (%P of %T)"
-				}
-		},
-		"trunk_label": {
-				"value": {
-						"instance": "Cloud Proxy Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
-				}
-		},
-		"trunk_language": {
-				"value": {
-						"instance": "en-US"
-				}
-		},
-		"trunk_media_disconnectOnIdleRTP": {
-				"value": {
-						"instance": true
-				}
-		},
-		"trunk_media_dscpValue": {
-				"value": {
-						"instance": 46
-				}
-		},
-		"trunk_media_dtmf_method": {
-				"value": {
-						"instance": "RTP Events"
-				}
-		},
-		"trunk_media_dtmf_payload": {
-				"value": {
-						"instance": 101
-				}
-		},
-		"trunk_media_method": {
-				"value": {
-						"instance": "normal"
-				}
-		},
-		"trunk_networkType": {
-				"value": {
-						"instance": "IP"
-				}
-		},
-		"trunk_protocol": {
-				"value": {
-						"instance": "SIP"
-				}
-		},
-		"trunk_transport_sipDscpValue": {
-				"value": {
-						"instance": 24
-				}
-		},
-		"trunk_type": {
-				"value": {
-						"instance": "tie.cloud.proxy"
-				}
-		}
-	})
-  trunk_meta_base_id = "tie_cloud_proxy.json"
-  trunk_type         = "EDGE"
-}
-
 resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Indirect_Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09" {
-  trunk_meta_base_id = "tie_indirect.json"
-  trunk_type         = "EDGE"
-  managed            = false
   name               = "Indirect Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
   properties         = jsonencode({
 		"trunk_diagnostic_ca_recording_enabled": {
@@ -215,14 +102,13 @@ resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Indirect_Ti
 				}
 		}
 	})
+  trunk_meta_base_id = "tie_indirect.json"
+  trunk_type         = "EDGE"
+  managed            = false
   state              = "active"
 }
 
 resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "PureCloud_Voice_-_AWS" {
-  managed            = true
-  name               = "PureCloud Voice - AWS"
-  trunk_meta_base_id = "external_sip_pcv_aws.json"
-  state              = "active"
   trunk_type         = "EXTERNAL"
   properties         = jsonencode({
 		"trunk_calling_id_priority": {
@@ -349,94 +235,18 @@ resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "PureCloud_V
 				}
 		}
 	})
-}
-
-resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Genesys_Cloud_-_CDM_WebRTC_Phone_Trunk" {
-  trunk_type         = "PHONE"
-  managed            = false
-  name               = "Genesys Cloud - CDM WebRTC Phone Trunk"
-  properties         = jsonencode({
-		"trunk_enabled": {
-				"value": {
-						"instance": true
-				}
-		},
-		"trunk_label": {
-				"value": {
-						"instance": "Genesys Cloud - CDM WebRTC Phone Trunk"
-				}
-		},
-		"trunk_language": {
-				"value": {
-						"instance": "en-US"
-				}
-		},
-		"trunk_maxCallRate": {
-				"value": {
-						"instance": "40/5s"
-				}
-		},
-		"trunk_media_codec": {
-				"value": {
-						"instance": [
-								"audio/opus"
-						]
-				}
-		},
-		"trunk_media_disconnectOnIdleRTP": {
-				"value": {
-						"instance": true
-				}
-		},
-		"trunk_media_dscpValue": {
-				"value": {
-						"instance": 46
-				}
-		},
-		"trunk_media_dtmf_method": {
-				"value": {
-						"instance": "RTP Events"
-				}
-		},
-		"trunk_media_dtmf_payload": {
-				"value": {
-						"instance": 101
-				}
-		},
-		"trunk_media_srtpCipherSuites": {
-				"value": {
-						"instance": [
-								"AES_CM_128_HMAC_SHA1_80"
-						]
-				}
-		},
-		"trunk_transport_retryableCauseCodes": {
-				"value": {
-						"instance": "1-5,25,27,28,31,34,38,41,42,44,46,62,63,79,91,96,97,99,100,103"
-				}
-		},
-		"trunk_transport_retryableReasonCodes": {
-				"value": {
-						"instance": "500-599"
-				}
-		},
-		"trunk_transport_sipDscpValue": {
-				"value": {
-						"instance": 24
-				}
-		},
-		"trunk_type": {
-				"value": {
-						"instance": "station.cdm.webrtc"
-				}
-		}
-	})
   state              = "active"
-  trunk_meta_base_id = "phone_connections_cdm_webrtc.json"
+  trunk_meta_base_id = "external_sip_pcv_aws.json"
+  managed            = true
+  name               = "PureCloud Voice - AWS"
 }
 
 resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09" {
   managed            = false
+  state              = "active"
+  trunk_meta_base_id = "edge_tielines.json"
+  trunk_type         = "EDGE"
+  name               = "Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
   properties         = jsonencode({
 		"trunk_diagnostic_ca_recording_enabled": {
 				"value": {
@@ -539,16 +349,120 @@ resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Tie_TrunkBa
 				}
 		}
 	})
-  trunk_meta_base_id = "edge_tielines.json"
+}
+
+resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Cloud_Proxy_Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09" {
+  properties         = jsonencode({
+		"trunk_diagnostic_ca_recording_enabled": {
+				"value": {
+						"instance": false
+				}
+		},
+		"trunk_diagnostic_kws_recording_enabled": {
+				"value": {
+						"instance": false
+				}
+		},
+		"trunk_diagnostic_kws_recording_percentage": {
+				"value": {
+						"instance": 100
+				}
+		},
+		"trunk_diagnostic_recognizer_recording_enabled": {
+				"value": {
+						"instance": false
+				}
+		},
+		"trunk_diagnostic_recognizer_recording_percentage": {
+				"value": {
+						"instance": 100
+				}
+		},
+		"trunk_diagnostic_recognizer_recording_type": {
+				"value": {
+						"instance": "Basic"
+				}
+		},
+		"trunk_fax_ecm": {
+				"value": {
+						"instance": true
+				}
+		},
+		"trunk_fax_speed": {
+				"value": {
+						"instance": 14400
+				}
+		},
+		"trunk_fax_transmit_headerFormat": {
+				"value": {
+						"instance": "TX Date: %m/%d/%y %I:%M:%S %p  From: %l  To: %r    (%P of %T)"
+				}
+		},
+		"trunk_label": {
+				"value": {
+						"instance": "Cloud Proxy Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
+				}
+		},
+		"trunk_language": {
+				"value": {
+						"instance": "en-US"
+				}
+		},
+		"trunk_media_disconnectOnIdleRTP": {
+				"value": {
+						"instance": true
+				}
+		},
+		"trunk_media_dscpValue": {
+				"value": {
+						"instance": 46
+				}
+		},
+		"trunk_media_dtmf_method": {
+				"value": {
+						"instance": "RTP Events"
+				}
+		},
+		"trunk_media_dtmf_payload": {
+				"value": {
+						"instance": 101
+				}
+		},
+		"trunk_media_method": {
+				"value": {
+						"instance": "normal"
+				}
+		},
+		"trunk_networkType": {
+				"value": {
+						"instance": "IP"
+				}
+		},
+		"trunk_protocol": {
+				"value": {
+						"instance": "SIP"
+				}
+		},
+		"trunk_transport_sipDscpValue": {
+				"value": {
+						"instance": 24
+				}
+		},
+		"trunk_type": {
+				"value": {
+						"instance": "tie.cloud.proxy"
+				}
+		}
+	})
+  trunk_meta_base_id = "tie_cloud_proxy.json"
   trunk_type         = "EDGE"
-  name               = "Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
+  managed            = false
+  name               = "Cloud Proxy Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
   state              = "active"
 }
 
 resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Direct_Tie_TrunkBase_for_EdgeGroup_f9007dbc-d9da-49c1-b7c9-4a20b0bece09" {
   managed            = false
-  name               = "Direct Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
-  trunk_type         = "EDGE"
   properties         = jsonencode({
 		"trunk_diagnostic_ca_recording_enabled": {
 				"value": {
@@ -651,14 +565,100 @@ resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Direct_Tie_
 				}
 		}
 	})
-  state              = "active"
   trunk_meta_base_id = "tie_direct.json"
+  state              = "active"
+  trunk_type         = "EDGE"
+  name               = "Direct Tie TrunkBase for EdgeGroup f9007dbc-d9da-49c1-b7c9-4a20b0bece09"
+}
+
+resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Genesys_Cloud_-_CDM_WebRTC_Phone_Trunk" {
+  properties         = jsonencode({
+		"trunk_enabled": {
+				"value": {
+						"instance": true
+				}
+		},
+		"trunk_label": {
+				"value": {
+						"instance": "Genesys Cloud - CDM WebRTC Phone Trunk"
+				}
+		},
+		"trunk_language": {
+				"value": {
+						"instance": "en-US"
+				}
+		},
+		"trunk_maxCallRate": {
+				"value": {
+						"instance": "40/5s"
+				}
+		},
+		"trunk_media_codec": {
+				"value": {
+						"instance": [
+								"audio/opus"
+						]
+				}
+		},
+		"trunk_media_disconnectOnIdleRTP": {
+				"value": {
+						"instance": true
+				}
+		},
+		"trunk_media_dscpValue": {
+				"value": {
+						"instance": 46
+				}
+		},
+		"trunk_media_dtmf_method": {
+				"value": {
+						"instance": "RTP Events"
+				}
+		},
+		"trunk_media_dtmf_payload": {
+				"value": {
+						"instance": 101
+				}
+		},
+		"trunk_media_srtpCipherSuites": {
+				"value": {
+						"instance": [
+								"AES_CM_128_HMAC_SHA1_80"
+						]
+				}
+		},
+		"trunk_transport_retryableCauseCodes": {
+				"value": {
+						"instance": "1-5,25,27,28,31,34,38,41,42,44,46,62,63,79,91,96,97,99,100,103"
+				}
+		},
+		"trunk_transport_retryableReasonCodes": {
+				"value": {
+						"instance": "500-599"
+				}
+		},
+		"trunk_transport_sipDscpValue": {
+				"value": {
+						"instance": 24
+				}
+		},
+		"trunk_type": {
+				"value": {
+						"instance": "station.cdm.webrtc"
+				}
+		}
+	})
+  state              = "active"
+  trunk_meta_base_id = "phone_connections_cdm_webrtc.json"
+  trunk_type         = "PHONE"
+  managed            = false
+  name               = "Genesys Cloud - CDM WebRTC Phone Trunk"
 }
 
 resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Genesys_Cloud_-_CDM_SIP_Phone_Trunk" {
-  trunk_meta_base_id = "phone_connections_cdm.json"
-  managed            = false
   name               = "Genesys Cloud - CDM SIP Phone Trunk"
+  state              = "active"
+  managed            = false
   properties         = jsonencode({
 		"trunk_access_acl_allowList": {
 				"value": {
@@ -762,7 +762,7 @@ resource "genesyscloud_telephony_providers_edges_trunkbasesettings" "Genesys_Clo
 				}
 		}
 	})
-  state              = "active"
+  trunk_meta_base_id = "phone_connections_cdm.json"
   trunk_type         = "PHONE"
 }
 

@@ -1,5 +1,3 @@
-//oauthClientId = "993c6c74-054c-48a2-92cc-a83d09b60e96"
-//oauthClientSecret = "HFCdS5sB4aewzArpwuB5_NRjopJBbi9ObmWcRQIcDnA"
 oauthAWSRegion = "eu-west-1"
 proxyHost = "surf-lbr.pasi.log.intra.laposte.fr"
 proxyPort = "8080"
@@ -18,3 +16,6 @@ oauthClientSecret_R7EX = ""
 
 oauthClientId_PROD = ""
 oauthClientSecret_PROD = ""
+
+//oauthClientId_LBPHP = "993c6c74-054c-48a2-92cc-a83d09b60e96"
+//oauthClientSecret_LBPHP = "HFCdS5sB4aewzArpwuB5_NRjopJBbi9ObmWcRQIcDnA"
