@@ -1,10 +1,10 @@
-variable "oauthClientId" {
+/*variable "oauthClientId" {
     description = "Client ID for the Genesys Cloud CX Org"
 }
 
 variable "oauthClientSecret" {
     description = "Client Secret for the Genesys Cloud CX Org"
-}
+}*/
 
 variable "oauthAWSRegion" {
     description = "Region of the Genesys Cloud CX Org"
@@ -31,16 +31,35 @@ variable "proxyPassword" {
 }
 
 variable "oauthClientId_ASSE" {
-    description = "Client ID for the Genesys Cloud CX Org"
+    description = "Client ID for the Genesys Cloud CX Org on ASSE"
 }
 
 variable "oauthClientSecret_ASSE" {
-    description = "Client Secret for the Genesys Cloud CX Org"
+    description = "Client Secret for the Genesys Cloud CX Org on ASSE"
 }
 
-variable "wrapupcode_supprimer_enregistrement_ASSE" {
-  type = string
-  default = "19164fd1-d02a-41c6-9281-f46c412cdf4f"
+variable "oauthClientId_TFON" {
+    description = "Client ID for the Genesys Cloud CX Org on TFON"
+}
+
+variable "oauthClientSecret_TFON" {
+    description = "Client Secret for the Genesys Cloud CX Org on TFON"
+}
+
+variable "oauthClientId_R7EX" {
+    description = "Client ID for the Genesys Cloud CX Org on R7EX"
+}
+
+variable "oauthClientSecret_R7EX" {
+    description = "Client Secret for the Genesys Cloud CX Org on R7EX"
+}
+
+variable "oauthClientId_PROD" {
+    description = "Client ID for the Genesys Cloud CX Org on PROD"
+}
+
+variable "oauthClientSecret_PROD" {
+    description = "Client Secret for the Genesys Cloud CX Org on PROD"
 }
 
 variable "routing_queue_alerting_timeout_sec" {

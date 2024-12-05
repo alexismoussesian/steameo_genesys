@@ -9,8 +9,12 @@ terraform {
 }
 
 provider "genesyscloud"{
-  oauthclient_id = var.oauthClientId_ASSE
-  oauthclient_secret = var.oauthClientSecret_ASSE
+  //oauthclient_id = var.oauthClientId_ASSE
+  //oauthclient_secret = var.oauthClientSecret_ASSE
+
+  oauthclient_id     = "${terraform.workspace == "default" ? var.oauthClientId_ASSE: terraform.workspace == "tfon" ? var.oauthClientId_TFON : terraform.workspace == "r7ex" ? var.oauthClientId_R7EX : terraform.workspace == "prod" ? var.oauthClientId_PROD : ""}"
+  oauthclient_secret = "${terraform.workspace == "default" ? var.oauthClientSecret_ASSE : terraform.workspace == "tfon" ? var.oauthClientSecret_TFON : terraform.workspace == "r7ex" ? var.oauthClientSecret_R7EX : terraform.workspace == "prod" ? var.oauthClientSecret_PROD : ""}"
+
   aws_region = var.oauthAWSRegion
   sdk_debug = true
 
