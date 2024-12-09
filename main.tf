@@ -1,9 +1,10 @@
 terraform {
- required_version = ">= 1.7.3"
+ required_version = ">= 1.10.0"
 
   required_providers {
     genesyscloud = {
       source  = "mypurecloud/genesyscloud"
+      version = "1.53.0"
     }
   }
 }
@@ -44,6 +45,7 @@ resource "genesyscloud_tf_export" "full_export" {
                                   "genesyscloud_integration_action",
                                   "genesyscloud_routing_wrapupcode",
                                   "genesyscloud_architect_datatable",
+                                  "genesyscloud_architect_datatable_row",
                                   "genesyscloud_routing_skill"]
   include_state_file = true
   export_as_hcl = true

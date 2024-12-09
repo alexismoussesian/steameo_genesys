@@ -1,2 +1,2 @@
 key,Msg_TAE_Actif_Att,TAE_Seuil_Inf_Att,TAE_Seuil_Sup_Att,Msg_TAE_Seuil_Inf_Att,Msg_TAE_Seuil_Inf_Sup_Att,Msg_TAE_Seuil_Sup_Att,Msg_Flash_Att,Cbk_Actif_Att,Seuil_TAE_Cbk_Att,Msg_Cbk_Att,Duree_Msg_Att_1,Msg_Att_1,Duree_Msg_Att_2,Msg_Att_2
-Profil_GENE_LBP,True,120,300,GENE_LBP_MsgTAE_inf_2Min,GENE_LBP_MsgTAE_entre_2 Min_5Min,GENE_LBP_MsgTAE_sup_5 Min,,False,0,,0,,0,
+Profil_GENE_LBP,true,120,300,GENE_LBP_MsgTAE_inf_2Min,GENE_LBP_MsgTAE_entre_2 Min_5Min,GENE_LBP_MsgTAE_sup_5 Min,,false,0,,0,,0,
