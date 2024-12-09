@@ -1,6 +1,11 @@
 resource "genesyscloud_architect_datatable_row" "TEL_ROUTAGE_NUMERO_APPELE_rows" {
+    lifecycle {
+    ignore_changes = [
+      properties_json
+    ]
+  }
   # Chargement direct du fichier CSV en utilisant la variable du chemin
-  for_each = { for dt in toset(csvdecode(file(var.numero_appele_csv_path))) : dt.key => dt }
+  for_each = { for dt in toset(csvdecode(file(format("%s%s", local.repertoire_csv_org, "TEL_ROUTAGE_NUMERO_APPELE.csv")))) : dt.key => dt }
 
   datatable_id = genesyscloud_architect_datatable.TEL_ROUTAGE_NUMERO_APPELE.id
   key_value    = each.value.key
@@ -16,7 +21,7 @@ resource "genesyscloud_architect_datatable_row" "TEL_ROUTAGE_NUMERO_APPELE_rows"
   })
 }
 
-resource "genesyscloud_architect_datatable_row" "TEL_ROUTAGE_ATTENTE" {
+resource "genesyscloud_architect_datatable_row" "TEL_ROUTAGE_ATTENTE_rows" {
   lifecycle {
     ignore_changes = [
       properties_json
@@ -24,7 +29,7 @@ resource "genesyscloud_architect_datatable_row" "TEL_ROUTAGE_ATTENTE" {
   }
 
   # Chargement direct du fichier CSV en utilisant la variable du chemin
-  for_each = { for dt in toset(csvdecode(file(var.routage_attente_csv_path))) : dt.key => dt }
+  for_each = { for dt in toset(csvdecode(file(format("%s%s", local.repertoire_csv, "TEL_ROUTAGE_ATTENTE.csv")))) : dt.key => dt }
 
   datatable_id = genesyscloud_architect_datatable.TEL_ROUTAGE_ATTENTE.id
   key_value    = each.value.key

@@ -17,5 +17,4 @@ oauthClientSecret_R7EX = ""
 oauthClientId_PROD = ""
 oauthClientSecret_PROD = ""
 
-//oauthClientId_LBPHP = "993c6c74-054c-48a2-92cc-a83d09b60e96"
-//oauthClientSecret_LBPHP = "HFCdS5sB4aewzArpwuB5_NRjopJBbi9ObmWcRQIcDnA"
+
