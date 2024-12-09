@@ -49,6 +49,7 @@ resource "genesyscloud_tf_export" "full_export" {
                                   "genesyscloud_routing_wrapupcode",
                                   "genesyscloud_architect_datatable",
                                   "genesyscloud_architect_datatable_row",
+                                  "genesyscloud_integration_credential",
                                   "genesyscloud_routing_skill"]
   include_state_file = true
   export_as_hcl = true

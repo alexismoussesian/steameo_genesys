@@ -22,9 +22,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_NUMERO_APPELE" {
     type  = "string"
   }
   properties {
+    name  = "Entite"
     title = "Entite"
     type  = "string"
-    name  = "Entite"
   }
   properties {
     name  = "Motif_Defaut_Num_App"
@@ -32,55 +32,28 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_NUMERO_APPELE" {
     type  = "string"
   }
   properties {
+    title = "Groupe_Urgence"
     type  = "string"
     name  = "Groupe_Urgence"
-    title = "Groupe_Urgence"
   }
   properties {
-    name  = "Action_Num_App"
     title = "Action_Num_App"
     type  = "string"
+    name  = "Action_Num_App"
   }
   properties {
-    type  = "string"
     name  = "Nom_Action_Num_App"
     title = "Nom_Action_Num_App"
-  }
-}
-
-resource "genesyscloud_architect_datatable" "MEL_THEME_MACRO" {
-  description = "Table pour gestion des thèmes macro"
-  division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "MEL_THEME_MACRO"
-  properties {
-    name  = "key"
-    title = "File_attente"
     type  = "string"
-  }
-  properties {
-    name  = "Code_fonctionnel"
-    title = "Code_fonctionnel"
-    type  = "string"
-  }
-  properties {
-    name  = "Code_theme"
-    title = "Code_theme"
-    type  = "string"
-  }
-  properties {
-    type    = "boolean"
-    default = "false"
-    name    = "Click_to"
-    title   = "Click_to"
   }
 }
 
 resource "genesyscloud_architect_datatable" "TEC_FONCTION_GROUPE_ROLE" {
   name = "TEC_FONCTION_GROUPE_ROLE"
   properties {
+    name  = "key"
     title = "ID_LIGNE"
     type  = "string"
-    name  = "key"
   }
   properties {
     name  = "CODE_FONCTION"
@@ -88,9 +61,9 @@ resource "genesyscloud_architect_datatable" "TEC_FONCTION_GROUPE_ROLE" {
     type  = "string"
   }
   properties {
+    name  = "LIBELLE_FONCTION"
     title = "LIBELLE_FONCTION"
     type  = "string"
-    name  = "LIBELLE_FONCTION"
   }
   properties {
     name  = "GROUPE_DE_ROLE"
@@ -100,288 +73,53 @@ resource "genesyscloud_architect_datatable" "TEC_FONCTION_GROUPE_ROLE" {
   division_id = "${genesyscloud_auth_division.Home.id}"
 }
 
-resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF_FERME" {
+resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_DISTRIBUTION" {
+  division_id = "${genesyscloud_auth_division.Home.id}"
+  name        = "TEL_ROUTAGE_DISTRIBUTION"
   properties {
     name  = "key"
-    title = "Motif_Ferm"
-    type  = "string"
-  }
-  properties {
-    name  = "Description_Ferm"
-    title = "Description_Ferm"
-    type  = "string"
-  }
-  properties {
-    name  = "Entite_Ferm"
-    title = "Entite_Ferm"
-    type  = "string"
-  }
-  properties {
-    name  = "Msg_Ferm"
-    title = "Msg_Ferm"
-    type  = "string"
-  }
-  properties {
-    name  = "Action_Ferm"
-    title = "Action_Ferm"
-    type  = "string"
-  }
-  properties {
-    name  = "Nom_Action_Ferm"
-    title = "Nom_Action_Ferm"
-    type  = "string"
-  }
-  properties {
-    name  = "Msg_Ferm_Exc"
-    title = "Msg_Ferm_Exc"
-    type  = "string"
-  }
-  properties {
-    type  = "string"
-    name  = "Action_Ferm_Exc"
-    title = "Action_Ferm_Exc"
-  }
-  properties {
-    name  = "Nom_Action_Ferm_Exc"
-    title = "Nom_Action_Ferm_Exc"
-    type  = "string"
-  }
-  properties {
-    type  = "string"
-    name  = "Msg_Ferm_Fin_An"
-    title = "Msg_Ferm_Fin_An"
-  }
-  properties {
-    name  = "Action_Ferm_Fin_An"
-    title = "Action_Ferm_Fin_An"
-    type  = "string"
-  }
-  properties {
-    title = "Nom_Action_Ferm_Fin_An"
-    type  = "string"
-    name  = "Nom_Action_Ferm_Fin_An"
-  }
-  properties {
-    name  = "Msg_Ferm_Urg"
-    title = "Msg_Ferm_Urg"
-    type  = "string"
-  }
-  properties {
-    name  = "Action_Ferm_Urg"
-    title = "Action_Ferm_Urg"
-    type  = "string"
-  }
-  properties {
-    name  = "Nom_Action_Ferm_Urg"
-    title = "Nom_Action_Ferm_Urg"
-    type  = "string"
-  }
-  division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "TEL_ROUTAGE_MOTIF_FERME"
-}
-
-resource "genesyscloud_architect_datatable" "MEL_ROUTAGE_THEME" {
-  properties {
-    name  = "key"
-    title = "Code_Fonctionnel"
-    type  = "string"
-  }
-  properties {
-    name  = "Description_Theme"
-    title = "Description_Theme"
-    type  = "string"
-  }
-  properties {
-    name  = "Entite_Theme"
-    title = "Entite_Theme"
-    type  = "string"
-  }
-  properties {
-    type  = "string"
-    name  = "Profil_Distribution_Theme"
-    title = "Profil_Distribution_Theme"
-  }
-  properties {
-    name  = "Prio_Ponderee_Theme"
-    title = "Prio_Ponderee_Theme"
-    type  = "integer"
-  }
-  properties {
-    name  = "Ordo_Regles_Theme"
-    title = "Ordo_Regles_Theme"
-    type  = "string"
-  }
-  properties {
-    name  = "Regle_1"
-    title = "Regle_1"
-    type  = "string"
-  }
-  properties {
-    name  = "Calendrier_Regle_1_Theme"
-    title = "Calendrier_Regle_1_Theme"
-    type  = "string"
-  }
-  properties {
-    name  = "Theme_Requalifie_1"
-    title = "Theme_Requalifie_1"
-    type  = "string"
-  }
-  properties {
-    name  = "Regle_2"
-    title = "Regle_2"
-    type  = "string"
-  }
-  properties {
-    name  = "Calendrier_Regle_2_Theme"
-    title = "Calendrier_Regle_2_Theme"
-    type  = "string"
-  }
-  properties {
-    title = "Theme_Requalifie_2"
-    type  = "string"
-    name  = "Theme_Requalifie_2"
-  }
-  properties {
-    name  = "Regle_3"
-    title = "Regle_3"
-    type  = "string"
-  }
-  properties {
-    title = "Calendrier_Regle_3_Theme"
-    type  = "string"
-    name  = "Calendrier_Regle_3_Theme"
-  }
-  properties {
-    title = "Theme_Requalifie_3"
-    type  = "string"
-    name  = "Theme_Requalifie_3"
-  }
-  properties {
-    name  = "Regle_4"
-    title = "Regle_4"
-    type  = "string"
-  }
-  properties {
-    name  = "Calendrier_Regle_4_Theme"
-    title = "Calendrier_Regle_4_Theme"
-    type  = "string"
-  }
-  properties {
-    title = "Theme_Requalifie_4"
-    type  = "string"
-    name  = "Theme_Requalifie_4"
-  }
-  properties {
-    title = "Regle_5"
-    type  = "string"
-    name  = "Regle_5"
-  }
-  properties {
-    name  = "Calendrier_Regle_5_Theme"
-    title = "Calendrier_Regle_5_Theme"
-    type  = "string"
-  }
-  properties {
-    title = "Theme_Requalifie_5"
-    type  = "string"
-    name  = "Theme_Requalifie_5"
-  }
-  properties {
-    type  = "string"
-    name  = "Regle_6"
-    title = "Regle_6"
-  }
-  properties {
-    type  = "string"
-    name  = "Calendrier_Regle_6_Theme"
-    title = "Calendrier_Regle_6_Theme"
-  }
-  properties {
-    name  = "Theme_Requalifie_6"
-    title = "Theme_Requalifie_6"
-    type  = "string"
-  }
-  properties {
-    name  = "Regle_7"
-    title = "Regle_7"
-    type  = "string"
-  }
-  properties {
-    title = "Calendrier_Regle_7_Theme"
-    type  = "string"
-    name  = "Calendrier_Regle_7_Theme"
-  }
-  properties {
-    name  = "Theme_Requalifie_7"
-    title = "Theme_Requalifie_7"
-    type  = "string"
-  }
-  properties {
-    title = "Regle_8"
-    type  = "string"
-    name  = "Regle_8"
-  }
-  properties {
-    name  = "Calendrier_Regle_8_Theme"
-    title = "Calendrier_Regle_8_Theme"
-    type  = "string"
-  }
-  properties {
-    title = "Theme_Requalifie_8"
-    type  = "string"
-    name  = "Theme_Requalifie_8"
-  }
-  properties {
-    type  = "string"
-    name  = "Regle_9"
-    title = "Regle_9"
-  }
-  properties {
-    name  = "Calendrier_Regle_9_Theme"
-    title = "Calendrier_Regle_9_Theme"
-    type  = "string"
-  }
-  properties {
-    title = "Theme_Requalifie_9"
-    type  = "string"
-    name  = "Theme_Requalifie_9"
-  }
-  properties {
-    name  = "Regle_10"
-    title = "Regle_10"
-    type  = "string"
-  }
-  properties {
-    name  = "Calendrier_Regle_10_Theme"
-    title = "Calendrier_Regle_10_Theme"
-    type  = "string"
-  }
-  properties {
-    name  = "Theme_Requalifie_10"
-    title = "Theme_Requalifie_10"
-    type  = "string"
-  }
-  division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "MEL_ROUTAGE_THEME"
-}
-
-resource "genesyscloud_architect_datatable" "MEL_ROUTAGE_DISTRIB" {
-  division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "MEL_ROUTAGE_DISTRIB"
-  properties {
     title = "Profil_Distribution"
     type  = "string"
-    name  = "key"
   }
   properties {
-    name  = "Description_Distrib"
     title = "Description_Distrib"
     type  = "string"
+    name  = "Description_Distrib"
+  }
+  properties {
+    name  = "Entite_Distrib"
+    title = "Entite_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Type_Distrib"
+    title = "Type_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Msg_Dissuasion"
+    title = "Msg_Dissuasion"
+    type  = "string"
   }
   properties {
     type  = "string"
-    name  = "Entite_Distrib"
-    title = "Entite_Distrib"
+    name  = "Renvoi_Externe_Distrib"
+    title = "Renvoi_Externe_Distrib"
+  }
+  properties {
+    title = "Renvoi_Bot_Genesys_Distrib"
+    type  = "string"
+    name  = "Renvoi_Bot_Genesys_Distrib"
+  }
+  properties {
+    title = "Type_Enreg_Distrib"
+    type  = "string"
+    name  = "Type_Enreg_Distrib"
+  }
+  properties {
+    title = "Tx_Appel_Enreg_Distrib"
+    type  = "integer"
+    name  = "Tx_Appel_Enreg_Distrib"
   }
   properties {
     title = "Priorite_Distrib"
@@ -394,47 +132,83 @@ resource "genesyscloud_architect_datatable" "MEL_ROUTAGE_DISTRIB" {
     type  = "string"
   }
   properties {
-    title = "Comp_Distrib"
-    type  = "string"
-    name  = "Comp_Distrib"
-  }
-  properties {
-    name    = "Mail_Secu_Distrib"
-    title   = "Mail_Secu_Distrib"
+    title   = "Appels_Secu_Distrib"
     type    = "boolean"
     default = "false"
+    name    = "Appels_Secu_Distrib"
   }
   properties {
-    title   = "Agent_Pref_Distrib"
-    type    = "boolean"
+    title = "Comp_1_Distrib"
+    type  = "string"
+    name  = "Comp_1_Distrib"
+  }
+  properties {
+    title = "Comp_2_Distrib"
+    type  = "string"
+    name  = "Comp_2_Distrib"
+  }
+  properties {
     default = "false"
     name    = "Agent_Pref_Distrib"
+    title   = "Agent_Pref_Distrib"
+    type    = "boolean"
   }
   properties {
-    default = "false"
-    name    = "Dernier_Agent_Distrib"
     title   = "Dernier_Agent_Distrib"
     type    = "boolean"
-  }
-  properties {
-    name    = "LIFO_Actif"
-    title   = "LIFO_Actif"
-    type    = "boolean"
     default = "false"
+    name    = "Dernier_Agent_Distrib"
   }
   properties {
-    name  = "Ponderation_Prio_LIFO"
-    title = "Ponderation_Prio_LIFO"
+    name  = "Profil_Attente_Distrib"
+    title = "Profil_Attente_Distrib"
+    type  = "string"
+  }
+  properties {
+    type  = "integer"
+    name  = "Seuil_TAE_Distrib"
+    title = "Seuil_TAE_Distrib"
+  }
+  properties {
+    name  = "Action_Seuil_TAE_Distrib"
+    title = "Action_Seuil_TAE_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Motif_Seuil_TAE_Distrib"
+    title = "Motif_Seuil_TAE_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Msg_Seuil_TAE_Distrib"
+    title = "Msg_Seuil_TAE_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Seuil_TAR_Distrib"
+    title = "Seuil_TAR_Distrib"
     type  = "integer"
   }
   properties {
-    name  = "Seuil_Deprio_LIFO"
-    title = "Seuil_Deprio_LIFO"
-    type  = "integer"
+    title = "Action_Seuil_TAR_Distrib"
+    type  = "string"
+    name  = "Action_Seuil_TAR_Distrib"
+  }
+  properties {
+    name  = "Motif_Seuil_TAR_Distrib"
+    title = "Motif_Seuil_TAR_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Msg_Seuil_TAR_Distrib"
+    title = "Msg_Seuil_TAR_Distrib"
+    type  = "string"
   }
 }
 
 resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
+  division_id = "${genesyscloud_auth_division.Home.id}"
+  name        = "MEL_CONTROLE_CONTENU"
   properties {
     name  = "key"
     title = "Cle"
@@ -446,9 +220,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Champ_2"
     title = "Champ_2"
-    type  = "string"
   }
   properties {
     name  = "Champ_3"
@@ -466,9 +240,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Champ_6"
     title = "Champ_6"
+    type  = "string"
   }
   properties {
     name  = "Champ_7"
@@ -486,9 +260,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
+    name  = "Champ_10"
     title = "Champ_10"
     type  = "string"
-    name  = "Champ_10"
   }
   properties {
     name  = "Champ_11"
@@ -521,9 +295,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     name  = "Champ_16"
   }
   properties {
+    type  = "string"
     name  = "Champ_17"
     title = "Champ_17"
-    type  = "string"
   }
   properties {
     name  = "Champ_18"
@@ -536,9 +310,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
+    name  = "Champ_20"
     title = "Champ_20"
     type  = "string"
-    name  = "Champ_20"
   }
   properties {
     name  = "Champ_21"
@@ -551,9 +325,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
+    name  = "Champ_23"
     title = "Champ_23"
     type  = "string"
-    name  = "Champ_23"
   }
   properties {
     name  = "Champ_24"
@@ -561,9 +335,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
+    name  = "Champ_25"
     title = "Champ_25"
     type  = "string"
-    name  = "Champ_25"
   }
   properties {
     name  = "Champ_26"
@@ -576,9 +350,9 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Champ_28"
     title = "Champ_28"
+    type  = "string"
   }
   properties {
     name  = "Champ_29"
@@ -586,20 +360,195 @@ resource "genesyscloud_architect_datatable" "MEL_CONTROLE_CONTENU" {
     type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Champ_30"
     title = "Champ_30"
-    type  = "string"
   }
   properties {
     name  = "Theme_Requalifie"
     title = "Theme_Requalifie"
     type  = "string"
   }
+}
+
+resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF_FERME" {
   division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "MEL_CONTROLE_CONTENU"
+  name        = "TEL_ROUTAGE_MOTIF_FERME"
+  properties {
+    name  = "key"
+    title = "Motif_Ferm"
+    type  = "string"
+  }
+  properties {
+    name  = "Description_Ferm"
+    title = "Description_Ferm"
+    type  = "string"
+  }
+  properties {
+    type  = "string"
+    name  = "Entite_Ferm"
+    title = "Entite_Ferm"
+  }
+  properties {
+    name  = "Msg_Ferm"
+    title = "Msg_Ferm"
+    type  = "string"
+  }
+  properties {
+    name  = "Action_Ferm"
+    title = "Action_Ferm"
+    type  = "string"
+  }
+  properties {
+    name  = "Nom_Action_Ferm"
+    title = "Nom_Action_Ferm"
+    type  = "string"
+  }
+  properties {
+    name  = "Msg_Ferm_Exc"
+    title = "Msg_Ferm_Exc"
+    type  = "string"
+  }
+  properties {
+    type  = "string"
+    name  = "Action_Ferm_Exc"
+    title = "Action_Ferm_Exc"
+  }
+  properties {
+    type  = "string"
+    name  = "Nom_Action_Ferm_Exc"
+    title = "Nom_Action_Ferm_Exc"
+  }
+  properties {
+    type  = "string"
+    name  = "Msg_Ferm_Fin_An"
+    title = "Msg_Ferm_Fin_An"
+  }
+  properties {
+    name  = "Action_Ferm_Fin_An"
+    title = "Action_Ferm_Fin_An"
+    type  = "string"
+  }
+  properties {
+    name  = "Nom_Action_Ferm_Fin_An"
+    title = "Nom_Action_Ferm_Fin_An"
+    type  = "string"
+  }
+  properties {
+    name  = "Msg_Ferm_Urg"
+    title = "Msg_Ferm_Urg"
+    type  = "string"
+  }
+  properties {
+    name  = "Action_Ferm_Urg"
+    title = "Action_Ferm_Urg"
+    type  = "string"
+  }
+  properties {
+    name  = "Nom_Action_Ferm_Urg"
+    title = "Nom_Action_Ferm_Urg"
+    type  = "string"
+  }
+}
+
+resource "genesyscloud_architect_datatable" "MEL_THEME_MACRO" {
+  name = "MEL_THEME_MACRO"
+  properties {
+    name  = "key"
+    title = "File_attente"
+    type  = "string"
+  }
+  properties {
+    name  = "Code_fonctionnel"
+    title = "Code_fonctionnel"
+    type  = "string"
+  }
+  properties {
+    title = "Code_theme"
+    type  = "string"
+    name  = "Code_theme"
+  }
+  properties {
+    default = "false"
+    name    = "Click_to"
+    title   = "Click_to"
+    type    = "boolean"
+  }
+  description = "Table pour gestion des thèmes macro"
+  division_id = "${genesyscloud_auth_division.Home.id}"
+}
+
+resource "genesyscloud_architect_datatable" "MEL_ROUTAGE_DISTRIB" {
+  name = "MEL_ROUTAGE_DISTRIB"
+  properties {
+    name  = "key"
+    title = "Profil_Distribution"
+    type  = "string"
+  }
+  properties {
+    name  = "Description_Distrib"
+    title = "Description_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Entite_Distrib"
+    title = "Entite_Distrib"
+    type  = "string"
+  }
+  properties {
+    name  = "Priorite_Distrib"
+    title = "Priorite_Distrib"
+    type  = "integer"
+  }
+  properties {
+    name  = "File_Attente_Distrib"
+    title = "File_Attente_Distrib"
+    type  = "string"
+  }
+  properties {
+    title = "Comp_Distrib"
+    type  = "string"
+    name  = "Comp_Distrib"
+  }
+  properties {
+    default = "false"
+    name    = "Mail_Secu_Distrib"
+    title   = "Mail_Secu_Distrib"
+    type    = "boolean"
+  }
+  properties {
+    default = "false"
+    name    = "Agent_Pref_Distrib"
+    title   = "Agent_Pref_Distrib"
+    type    = "boolean"
+  }
+  properties {
+    default = "false"
+    name    = "Dernier_Agent_Distrib"
+    title   = "Dernier_Agent_Distrib"
+    type    = "boolean"
+  }
+  properties {
+    default = "false"
+    name    = "LIFO_Actif"
+    title   = "LIFO_Actif"
+    type    = "boolean"
+  }
+  properties {
+    name  = "Ponderation_Prio_LIFO"
+    title = "Ponderation_Prio_LIFO"
+    type  = "integer"
+  }
+  properties {
+    name  = "Seuil_Deprio_LIFO"
+    title = "Seuil_Deprio_LIFO"
+    type  = "integer"
+  }
+  division_id = "${genesyscloud_auth_division.Home.id}"
 }
 
 resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MENU" {
+  name = "TEL_ROUTAGE_MENU"
   properties {
     name  = "key"
     title = "Menu"
@@ -626,9 +575,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MENU" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Choix_1_Calendrier_Menu"
     title = "Choix_1_Calendrier_Menu"
+    type  = "string"
   }
   properties {
     name  = "Choix_1_Action_Menu"
@@ -646,14 +595,14 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MENU" {
     type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Choix_2_Action_Menu"
     title = "Choix_2_Action_Menu"
-    type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Choix_2_Nom_Action_Menu"
     title = "Choix_2_Nom_Action_Menu"
-    type  = "string"
   }
   properties {
     name  = "Choix_3_Calendrier_Menu"
@@ -671,14 +620,14 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MENU" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Choix_4_Calendrier_Menu"
     title = "Choix_4_Calendrier_Menu"
+    type  = "string"
   }
   properties {
+    name  = "Choix_4_Action_Menu"
     title = "Choix_4_Action_Menu"
     type  = "string"
-    name  = "Choix_4_Action_Menu"
   }
   properties {
     name  = "Choix_4_Nom_Action_Menu"
@@ -686,9 +635,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MENU" {
     type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Choix_5_Calendrier_Menu"
     title = "Choix_5_Calendrier_Menu"
-    type  = "string"
   }
   properties {
     name  = "Choix_5_Action_Menu"
@@ -696,9 +645,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MENU" {
     type  = "string"
   }
   properties {
-    title = "Choix_5_Nom_Action_Menu"
     type  = "string"
     name  = "Choix_5_Nom_Action_Menu"
+    title = "Choix_5_Nom_Action_Menu"
   }
   properties {
     name  = "Choix_6_Calendrier_Menu"
@@ -731,86 +680,13 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MENU" {
     type  = "string"
   }
   division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "TEL_ROUTAGE_MENU"
-}
-
-resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_ACCUEIL" {
-  division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "TEL_ROUTAGE_ACCUEIL"
-  properties {
-    name  = "key"
-    title = "Accueil"
-    type  = "string"
-  }
-  properties {
-    title = "Description_Acc"
-    type  = "string"
-    name  = "Description_Acc"
-  }
-  properties {
-    name  = "Entite_Acc"
-    title = "Entite_Acc"
-    type  = "string"
-  }
-  properties {
-    type  = "string"
-    name  = "Msg_Acc"
-    title = "Msg_Acc"
-  }
-  properties {
-    type  = "string"
-    name  = "Calendrier_Acc"
-    title = "Calendrier_Acc"
-  }
-  properties {
-    name  = "Msg_Flash_Acc"
-    title = "Msg_Flash_Acc"
-    type  = "string"
-  }
-  properties {
-    name  = "Action_Acc"
-    title = "Action_Acc"
-    type  = "string"
-  }
-  properties {
-    name  = "Nom_Action_Acc"
-    title = "Nom_Action_Acc"
-    type  = "string"
-  }
-}
-
-resource "genesyscloud_architect_datatable" "TEL_CODE_MOTIF" {
-  description = "Table pour gestion numéro et libellé motif dans le cas d'un appel avec gestion OTP (en provenance du DIGITAL LBP)"
-  division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "TEL_CODE_MOTIF"
-  properties {
-    title = "Code_Motif"
-    type  = "string"
-    name  = "key"
-  }
-  properties {
-    title = "Libelle_Motif"
-    type  = "string"
-    name  = "Libelle_Motif"
-  }
-  properties {
-    title = "Description"
-    type  = "string"
-    name  = "Description"
-  }
-  properties {
-    name  = "Numero"
-    title = "Numero"
-    type  = "string"
-  }
 }
 
 resource "genesyscloud_architect_datatable" "TEL_SERVICE_PARAM" {
-  name = "TEL_SERVICE_PARAM"
   properties {
+    type  = "string"
     name  = "key"
     title = "Service"
-    type  = "string"
   }
   properties {
     name  = "Valeur_probante"
@@ -824,142 +700,12 @@ resource "genesyscloud_architect_datatable" "TEL_SERVICE_PARAM" {
   }
   description = "Table pour gestion de la valeur probante par departement"
   division_id = "${genesyscloud_auth_division.Home.id}"
-}
-
-resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_DISTRIBUTION" {
-  name = "TEL_ROUTAGE_DISTRIBUTION"
-  properties {
-    name  = "key"
-    title = "Profil_Distribution"
-    type  = "string"
-  }
-  properties {
-    name  = "Description_Distrib"
-    title = "Description_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Entite_Distrib"
-    title = "Entite_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Type_Distrib"
-    title = "Type_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Msg_Dissuasion"
-    title = "Msg_Dissuasion"
-    type  = "string"
-  }
-  properties {
-    name  = "Renvoi_Externe_Distrib"
-    title = "Renvoi_Externe_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Renvoi_Bot_Genesys_Distrib"
-    title = "Renvoi_Bot_Genesys_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Type_Enreg_Distrib"
-    title = "Type_Enreg_Distrib"
-    type  = "string"
-  }
-  properties {
-    type  = "integer"
-    name  = "Tx_Appel_Enreg_Distrib"
-    title = "Tx_Appel_Enreg_Distrib"
-  }
-  properties {
-    title = "Priorite_Distrib"
-    type  = "integer"
-    name  = "Priorite_Distrib"
-  }
-  properties {
-    name  = "File_Attente_Distrib"
-    title = "File_Attente_Distrib"
-    type  = "string"
-  }
-  properties {
-    type    = "boolean"
-    default = "false"
-    name    = "Appels_Secu_Distrib"
-    title   = "Appels_Secu_Distrib"
-  }
-  properties {
-    name  = "Comp_1_Distrib"
-    title = "Comp_1_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Comp_2_Distrib"
-    title = "Comp_2_Distrib"
-    type  = "string"
-  }
-  properties {
-    name    = "Agent_Pref_Distrib"
-    title   = "Agent_Pref_Distrib"
-    type    = "boolean"
-    default = "false"
-  }
-  properties {
-    type    = "boolean"
-    default = "false"
-    name    = "Dernier_Agent_Distrib"
-    title   = "Dernier_Agent_Distrib"
-  }
-  properties {
-    name  = "Profil_Attente_Distrib"
-    title = "Profil_Attente_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Seuil_TAE_Distrib"
-    title = "Seuil_TAE_Distrib"
-    type  = "integer"
-  }
-  properties {
-    name  = "Action_Seuil_TAE_Distrib"
-    title = "Action_Seuil_TAE_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Motif_Seuil_TAE_Distrib"
-    title = "Motif_Seuil_TAE_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Msg_Seuil_TAE_Distrib"
-    title = "Msg_Seuil_TAE_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Seuil_TAR_Distrib"
-    title = "Seuil_TAR_Distrib"
-    type  = "integer"
-  }
-  properties {
-    type  = "string"
-    name  = "Action_Seuil_TAR_Distrib"
-    title = "Action_Seuil_TAR_Distrib"
-  }
-  properties {
-    name  = "Motif_Seuil_TAR_Distrib"
-    title = "Motif_Seuil_TAR_Distrib"
-    type  = "string"
-  }
-  properties {
-    name  = "Msg_Seuil_TAR_Distrib"
-    title = "Msg_Seuil_TAR_Distrib"
-    type  = "string"
-  }
-  division_id = "${genesyscloud_auth_division.Home.id}"
+  name        = "TEL_SERVICE_PARAM"
 }
 
 resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
+  division_id = "${genesyscloud_auth_division.Home.id}"
+  name        = "TEL_ROUTAGE_MOTIF"
   properties {
     name  = "key"
     title = "Motif"
@@ -971,9 +717,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Entite_Motif"
     title = "Entite_Motif"
+    type  = "string"
   }
   properties {
     type  = "string"
@@ -997,14 +743,14 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Msg_Flash_Motif"
     title = "Msg_Flash_Motif"
-    type  = "string"
   }
   properties {
-    type  = "integer"
     name  = "Prio_Ponderee_Motif"
     title = "Prio_Ponderee_Motif"
+    type  = "integer"
   }
   properties {
     name  = "Ordon_Regles_Motif"
@@ -1012,9 +758,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Regle_1_Motif"
     title = "Regle_1_Motif"
-    type  = "string"
   }
   properties {
     name  = "Calendrier_Regle_1_Motif"
@@ -1027,14 +773,14 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
-    title = "Regle_2_Motif"
     type  = "string"
     name  = "Regle_2_Motif"
+    title = "Regle_2_Motif"
   }
   properties {
-    name  = "Calendrier_Regle_2_Motif"
     title = "Calendrier_Regle_2_Motif"
     type  = "string"
+    name  = "Calendrier_Regle_2_Motif"
   }
   properties {
     name  = "Motif_Requalifie_2"
@@ -1042,9 +788,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Regle_3_Motif"
     title = "Regle_3_Motif"
+    type  = "string"
   }
   properties {
     name  = "Calendrier_Regle_3_Motif"
@@ -1067,9 +813,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Motif_Requalifie_4"
     title = "Motif_Requalifie_4"
+    type  = "string"
   }
   properties {
     name  = "Regle_5_Motif"
@@ -1077,9 +823,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
-    name  = "Calendrier_Regle_5_Motif"
     title = "Calendrier_Regle_5_Motif"
     type  = "string"
+    name  = "Calendrier_Regle_5_Motif"
   }
   properties {
     name  = "Motif_Requalifie_5"
@@ -1092,19 +838,19 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
-    name  = "Calendrier_Regle_6_Motif"
     title = "Calendrier_Regle_6_Motif"
     type  = "string"
+    name  = "Calendrier_Regle_6_Motif"
   }
   properties {
-    name  = "Motif_Requalifie_6"
     title = "Motif_Requalifie_6"
     type  = "string"
+    name  = "Motif_Requalifie_6"
   }
   properties {
+    type  = "string"
     name  = "Regle_7_Motif"
     title = "Regle_7_Motif"
-    type  = "string"
   }
   properties {
     name  = "Calendrier_Regle_7_Motif"
@@ -1112,9 +858,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
-    name  = "Motif_Requalifie_7"
     title = "Motif_Requalifie_7"
     type  = "string"
+    name  = "Motif_Requalifie_7"
   }
   properties {
     name  = "Regle_8_Motif"
@@ -1137,9 +883,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
+    name  = "Calendrier_Regle_9_Motif"
     title = "Calendrier_Regle_9_Motif"
     type  = "string"
-    name  = "Calendrier_Regle_9_Motif"
   }
   properties {
     name  = "Motif_Requalifie_9"
@@ -1147,49 +893,48 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_MOTIF" {
     type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Regle_10_Motif"
     title = "Regle_10_Motif"
-    type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Calendrier_Regle_10_Motif"
     title = "Calendrier_Regle_10_Motif"
-    type  = "string"
   }
   properties {
+    type  = "string"
     name  = "Motif_Requalifie_10"
     title = "Motif_Requalifie_10"
-    type  = "string"
   }
-  division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "TEL_ROUTAGE_MOTIF"
 }
 
 resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_ATTENTE" {
+  name = "TEL_ROUTAGE_ATTENTE"
   properties {
     name  = "key"
     title = "Profil_Attente"
     type  = "string"
   }
   properties {
-    type  = "boolean"
     name  = "Msg_TAE_Actif_Att"
     title = "Msg_TAE_Actif_Att"
+    type  = "boolean"
   }
   properties {
-    type  = "integer"
     name  = "TAE_Seuil_Inf_Att"
     title = "TAE_Seuil_Inf_Att"
-  }
-  properties {
-    name  = "TAE_Seuil_Sup_Att"
-    title = "TAE_Seuil_Sup_Att"
     type  = "integer"
   }
   properties {
-    type  = "string"
+    title = "TAE_Seuil_Sup_Att"
+    type  = "integer"
+    name  = "TAE_Seuil_Sup_Att"
+  }
+  properties {
     name  = "Msg_TAE_Seuil_Inf_Att"
     title = "Msg_TAE_Seuil_Inf_Att"
+    type  = "string"
   }
   properties {
     name  = "Msg_TAE_Seuil_Inf_Sup_Att"
@@ -1202,9 +947,9 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_ATTENTE" {
     type  = "string"
   }
   properties {
-    type  = "string"
     name  = "Msg_Flash_Att"
     title = "Msg_Flash_Att"
+    type  = "string"
   }
   properties {
     name  = "Cbk_Actif_Att"
@@ -1212,14 +957,14 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_ATTENTE" {
     type  = "boolean"
   }
   properties {
+    type  = "integer"
     name  = "Seuil_TAE_Cbk_Att"
     title = "Seuil_TAE_Cbk_Att"
-    type  = "integer"
   }
   properties {
+    name  = "Msg_Cbk_Att"
     title = "Msg_Cbk_Att"
     type  = "string"
-    name  = "Msg_Cbk_Att"
   }
   properties {
     name  = "Duree_Msg_Att_1"
@@ -1242,6 +987,261 @@ resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_ATTENTE" {
     type  = "string"
   }
   division_id = "${genesyscloud_auth_division.Home.id}"
-  name        = "TEL_ROUTAGE_ATTENTE"
+}
+
+resource "genesyscloud_architect_datatable" "TEL_ROUTAGE_ACCUEIL" {
+  division_id = "${genesyscloud_auth_division.Home.id}"
+  name        = "TEL_ROUTAGE_ACCUEIL"
+  properties {
+    title = "Accueil"
+    type  = "string"
+    name  = "key"
+  }
+  properties {
+    name  = "Description_Acc"
+    title = "Description_Acc"
+    type  = "string"
+  }
+  properties {
+    name  = "Entite_Acc"
+    title = "Entite_Acc"
+    type  = "string"
+  }
+  properties {
+    name  = "Msg_Acc"
+    title = "Msg_Acc"
+    type  = "string"
+  }
+  properties {
+    name  = "Calendrier_Acc"
+    title = "Calendrier_Acc"
+    type  = "string"
+  }
+  properties {
+    name  = "Msg_Flash_Acc"
+    title = "Msg_Flash_Acc"
+    type  = "string"
+  }
+  properties {
+    name  = "Action_Acc"
+    title = "Action_Acc"
+    type  = "string"
+  }
+  properties {
+    name  = "Nom_Action_Acc"
+    title = "Nom_Action_Acc"
+    type  = "string"
+  }
+}
+
+resource "genesyscloud_architect_datatable" "TEL_CODE_MOTIF" {
+  properties {
+    title = "Code_Motif"
+    type  = "string"
+    name  = "key"
+  }
+  properties {
+    title = "Libelle_Motif"
+    type  = "string"
+    name  = "Libelle_Motif"
+  }
+  properties {
+    type  = "string"
+    name  = "Description"
+    title = "Description"
+  }
+  properties {
+    name  = "Numero"
+    title = "Numero"
+    type  = "string"
+  }
+  description = "Table pour gestion numéro et libellé motif dans le cas d'un appel avec gestion OTP (en provenance du DIGITAL LBP)"
+  division_id = "${genesyscloud_auth_division.Home.id}"
+  name        = "TEL_CODE_MOTIF"
+}
+
+resource "genesyscloud_architect_datatable" "MEL_ROUTAGE_THEME" {
+  division_id = "${genesyscloud_auth_division.Home.id}"
+  name        = "MEL_ROUTAGE_THEME"
+  properties {
+    type  = "string"
+    name  = "key"
+    title = "Code_Fonctionnel"
+  }
+  properties {
+    name  = "Description_Theme"
+    title = "Description_Theme"
+    type  = "string"
+  }
+  properties {
+    name  = "Entite_Theme"
+    title = "Entite_Theme"
+    type  = "string"
+  }
+  properties {
+    title = "Profil_Distribution_Theme"
+    type  = "string"
+    name  = "Profil_Distribution_Theme"
+  }
+  properties {
+    title = "Prio_Ponderee_Theme"
+    type  = "integer"
+    name  = "Prio_Ponderee_Theme"
+  }
+  properties {
+    name  = "Ordo_Regles_Theme"
+    title = "Ordo_Regles_Theme"
+    type  = "string"
+  }
+  properties {
+    name  = "Regle_1"
+    title = "Regle_1"
+    type  = "string"
+  }
+  properties {
+    type  = "string"
+    name  = "Calendrier_Regle_1_Theme"
+    title = "Calendrier_Regle_1_Theme"
+  }
+  properties {
+    name  = "Theme_Requalifie_1"
+    title = "Theme_Requalifie_1"
+    type  = "string"
+  }
+  properties {
+    name  = "Regle_2"
+    title = "Regle_2"
+    type  = "string"
+  }
+  properties {
+    name  = "Calendrier_Regle_2_Theme"
+    title = "Calendrier_Regle_2_Theme"
+    type  = "string"
+  }
+  properties {
+    type  = "string"
+    name  = "Theme_Requalifie_2"
+    title = "Theme_Requalifie_2"
+  }
+  properties {
+    name  = "Regle_3"
+    title = "Regle_3"
+    type  = "string"
+  }
+  properties {
+    name  = "Calendrier_Regle_3_Theme"
+    title = "Calendrier_Regle_3_Theme"
+    type  = "string"
+  }
+  properties {
+    name  = "Theme_Requalifie_3"
+    title = "Theme_Requalifie_3"
+    type  = "string"
+  }
+  properties {
+    name  = "Regle_4"
+    title = "Regle_4"
+    type  = "string"
+  }
+  properties {
+    name  = "Calendrier_Regle_4_Theme"
+    title = "Calendrier_Regle_4_Theme"
+    type  = "string"
+  }
+  properties {
+    type  = "string"
+    name  = "Theme_Requalifie_4"
+    title = "Theme_Requalifie_4"
+  }
+  properties {
+    name  = "Regle_5"
+    title = "Regle_5"
+    type  = "string"
+  }
+  properties {
+    name  = "Calendrier_Regle_5_Theme"
+    title = "Calendrier_Regle_5_Theme"
+    type  = "string"
+  }
+  properties {
+    title = "Theme_Requalifie_5"
+    type  = "string"
+    name  = "Theme_Requalifie_5"
+  }
+  properties {
+    name  = "Regle_6"
+    title = "Regle_6"
+    type  = "string"
+  }
+  properties {
+    name  = "Calendrier_Regle_6_Theme"
+    title = "Calendrier_Regle_6_Theme"
+    type  = "string"
+  }
+  properties {
+    name  = "Theme_Requalifie_6"
+    title = "Theme_Requalifie_6"
+    type  = "string"
+  }
+  properties {
+    name  = "Regle_7"
+    title = "Regle_7"
+    type  = "string"
+  }
+  properties {
+    type  = "string"
+    name  = "Calendrier_Regle_7_Theme"
+    title = "Calendrier_Regle_7_Theme"
+  }
+  properties {
+    name  = "Theme_Requalifie_7"
+    title = "Theme_Requalifie_7"
+    type  = "string"
+  }
+  properties {
+    name  = "Regle_8"
+    title = "Regle_8"
+    type  = "string"
+  }
+  properties {
+    name  = "Calendrier_Regle_8_Theme"
+    title = "Calendrier_Regle_8_Theme"
+    type  = "string"
+  }
+  properties {
+    name  = "Theme_Requalifie_8"
+    title = "Theme_Requalifie_8"
+    type  = "string"
+  }
+  properties {
+    name  = "Regle_9"
+    title = "Regle_9"
+    type  = "string"
+  }
+  properties {
+    title = "Calendrier_Regle_9_Theme"
+    type  = "string"
+    name  = "Calendrier_Regle_9_Theme"
+  }
+  properties {
+    name  = "Theme_Requalifie_9"
+    title = "Theme_Requalifie_9"
+    type  = "string"
+  }
+  properties {
+    title = "Regle_10"
+    type  = "string"
+    name  = "Regle_10"
+  }
+  properties {
+    name  = "Calendrier_Regle_10_Theme"
+    title = "Calendrier_Regle_10_Theme"
+    type  = "string"
+  }
+  properties {
+    name  = "Theme_Requalifie_10"
+    title = "Theme_Requalifie_10"
+    type  = "string"
+  }
 }
 
