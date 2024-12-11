@@ -6,16 +6,16 @@ resource "genesyscloud_routing_queue" "SQO" {
       media_settings_chat
     ]
   }
-  name        = "SQO"
-  division_id = "${data.genesyscloud_auth_division.Home.id}"
-  scoring_method                   = "TimestampAndPriority"
+  name                        = "SQO"
+  division_id                 = data.genesyscloud_auth_division.Home.id
+  scoring_method              = "TimestampAndPriority"
   suppress_in_queue_call_recording = true
-  acw_wrapup_prompt                = "OPTIONAL"
-  enable_audio_monitoring          = false
-  enable_transcription = false
-  skill_evaluation_method = "ALL"
-  enable_manual_assignment = false
-  auto_answer_only         = false
+  acw_wrapup_prompt           = "OPTIONAL"
+  enable_audio_monitoring     = false
+  enable_transcription        = false
+  skill_evaluation_method     = "ALL"
+  enable_manual_assignment    = false
+  auto_answer_only            = false
   media_settings_call {
     enable_auto_answer        = false
     enable_auto_dial_and_end  = false
@@ -50,9 +50,9 @@ resource "genesyscloud_routing_queue" "MEL_SQO_DSRC" {
     ]
   }
   name                             = "MEL_SQO_DSRC"
-  division_id                      = "${data.genesyscloud_auth_division.Home.id}"
-  acw_wrapup_prompt       = "OPTIONAL"
-  enable_audio_monitoring = false
+  division_id                      = data.genesyscloud_auth_division.Home.id
+  acw_wrapup_prompt                 = "OPTIONAL"
+  enable_audio_monitoring           = false
   skill_evaluation_method          = "ALL"
   scoring_method                   = "TimestampAndPriority"
   suppress_in_queue_call_recording = true
@@ -93,7 +93,7 @@ resource "genesyscloud_routing_queue" "TEL_PREMIUM_DSRC" {
     ]
   }
   name                     = "TEL_PREMIUM_DSRC"
-  division_id                      = "${data.genesyscloud_auth_division.Home.id}"
+  division_id              = data.genesyscloud_auth_division.Home.id
   skill_evaluation_method  = "ALL"
   acw_wrapup_prompt        = "OPTIONAL"
   auto_answer_only         = false
