@@ -106,7 +106,7 @@ resource "genesyscloud_location" "METR_NANCY" {
             city = "NANCY"
             country = "FR"
             state = ""
-            street1 = "53 rue des Jardiniers "
+            street1 = "53 rue des Jardiniers"
             street2 = ""
             zip_code = "54039"
     }
@@ -133,7 +133,7 @@ resource "genesyscloud_location" "METR_DIJON" {
     }
 }
    
-resource "genesyscloud_location" " METR_LYON" {
+resource "genesyscloud_location" "METR_LYON" {
     name = " METR_LYON"
     notes = "Site de LYON"
     address {
@@ -150,14 +150,14 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " METR_MARSEILLE" {
+ resource "genesyscloud_location" "METR_MARSEILLE" {
     name = " METR_MARSEILLE"
     notes = "Site de MARSEILLE"
     address {
             city = "MARSEILLE"
             country = "FR"
             state = ""
-            street1 = "5 rue Mathieu Stilatti  "
+            street1 = "5 rue Mathieu Stilatti"
             street2 = ""
             zip_code = "13900"
     }
@@ -167,7 +167,7 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " METR_MONTPELLIER" {
+ resource "genesyscloud_location" "METR_MONTPELLIER" {
     name = " METR_MONTPELLIER"
     notes = "Site de MONTPELLIER"
     address {
@@ -184,7 +184,7 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " METR_BORDEAUX" {
+ resource "genesyscloud_location" "METR_BORDEAUX" {
     name = " METR_BORDEAUX"
     notes = "Site de BORDEAUX"
     address {
@@ -201,7 +201,7 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " METR_TOULOUSE" {
+ resource "genesyscloud_location" "METR_TOULOUSE" {
     name = " METR_TOULOUSE"
     notes = "Site de TOULOUSE"
     address {
@@ -218,7 +218,7 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " DOM_BASSE_TERRE" {
+ resource "genesyscloud_location" "DOM_BASSE_TERRE" {
     name = " DOM_BASSE_TERRE"
     notes = "Site de JARRY"
     address {
@@ -235,7 +235,7 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " DOM_CAYENNE" {
+ resource "genesyscloud_location" "DOM_CAYENNE" {
     name = " DOM_CAYENNE"
     notes = "Site de CAYENNE"
     address {
@@ -252,11 +252,11 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " DOM_FORT_DE_FRANCE" {
+ resource "genesyscloud_location" "DOM_FORT_DE_FRANCE" {
     name = " DOM_FORT_DE_FRANCE"
     notes = "Site de FORT DE FRANCE"
     address {
-            city = "Quartier Kerlys "
+            city = "Quartier Kerlys"
             country = "FR"
             state = ""
             street1 = "5 rue St Christophe"
@@ -269,7 +269,7 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
   
- resource "genesyscloud_location" " DOM_SAINT_DENIS" {
+ resource "genesyscloud_location" "DOM_SAINT_DENIS" {
     name = " DOM_SAINT_DENIS"
     notes = "Site de SAINT DENIS DE LA REUNION"
     address {
@@ -286,7 +286,7 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
- resource "genesyscloud_location" " METR_CHALONS" {
+ resource "genesyscloud_location" "METR_CHALONS" {
     name = " METR_CHALONS"
     notes = "Site de CHALONS EN CHAMPAGNE"
     address {
@@ -303,14 +303,14 @@ resource "genesyscloud_location" " METR_LYON" {
     }
 }
 
-resource "genesyscloud_location" " METR_CLERMONT" {
+resource "genesyscloud_location" "METR_CLERMONT" {
     name = " METR_CLERMONT"
     notes = "Site de CLERMONT FERRAND"
     address {
             city = "CLERMONT FERRAND"
             country = "FR"
             state = ""
-            street1 = "17 rue du Maréchal de Lattre de Tassigny  "
+            street1 = "17 rue du Maréchal de Lattre de Tassigny"
             street2 = ""
             zip_code = "63044"
     }
@@ -320,14 +320,14 @@ resource "genesyscloud_location" " METR_CLERMONT" {
     }
 }
 
-resource "genesyscloud_location" " METR_SAINT_DENIS" {
+resource "genesyscloud_location" "METR_SAINT_DENIS" {
     name = " METR_SAINT_DENIS"
     notes = "Site de SAINT DENIS"
     address {
             city = "SAINT DENIS"
             country = "FR"
             state = ""
-            street1 = "Pleyad 7- 1 place de la Berline "
+            street1 = "Pleyad 7- 1 place de la Berline"
             street2 = ""
             zip_code = "93200"
     }
@@ -337,7 +337,7 @@ resource "genesyscloud_location" " METR_SAINT_DENIS" {
     }
 }
 
-resource "genesyscloud_location" " METR_LIMOGES" {
+resource "genesyscloud_location" "METR_LIMOGES" {
     name = " METR_LIMOGES"
     notes = "Site de LIMOGES"
     address {
@@ -354,7 +354,7 @@ resource "genesyscloud_location" " METR_LIMOGES" {
     }
 }
 
-resource "genesyscloud_location" " METR_STRASBOURG" {
+resource "genesyscloud_location" "METR_STRASBOURG" {
     name = " METR_STRASBOURG"
     notes = "Site de STRASBOURG"
     address {
@@ -371,7 +371,7 @@ resource "genesyscloud_location" " METR_STRASBOURG" {
     }
 }
 
-resource "genesyscloud_location" " METR_GRENOBLE" {
+resource "genesyscloud_location" "METR_GRENOBLE" {
     name = " METR_GRENOBLE"
     notes = "Site de GRENOBLE"
     address {
@@ -386,9 +386,9 @@ resource "genesyscloud_location" " METR_GRENOBLE" {
         number = "+33123456721"
         type = "default"
     }
-}l  
+} 
 
-resource "genesyscloud_location" " METR_POITIERS" {
+resource "genesyscloud_location" "METR_POITIERS" {
     name = " METR_POITIERS"
     notes = "Site de Poitiers"
     address {
@@ -403,9 +403,9 @@ resource "genesyscloud_location" " METR_POITIERS" {
         number = "+33123456722"
         type = "default"
     }
-}l  
+}
 
-resource "genesyscloud_location" " DOM_AJACCIO" {
+resource "genesyscloud_location" "DOM_AJACCIO" {
     name = " DOM_AJACCIO"
     notes = "Site d'AJACCIO"
     address {
@@ -420,9 +420,9 @@ resource "genesyscloud_location" " DOM_AJACCIO" {
         number = "+33123456723"
         type = "default"
     }
-}l
+}
 
-resource "genesyscloud_location" " METR_ROUEN" {
+resource "genesyscloud_location" "METR_ROUEN" {
     name = " METR_ROUEN"
     notes = "Site de ROUEN"
     address {
@@ -437,4 +437,4 @@ resource "genesyscloud_location" " METR_ROUEN" {
         number = "+33123456724"
         type = "default"
     }
-}l
+}
