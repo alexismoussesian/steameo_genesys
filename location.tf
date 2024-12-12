@@ -403,7 +403,7 @@ resource "genesyscloud_location" "METR_POITIERS" {
         number = "+33123456722"
         type = "default"
     }
-}l  
+}
 
 resource "genesyscloud_location" "DOM_AJACCIO" {
     name = "DOM_AJACCIO"
