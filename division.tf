@@ -15,7 +15,7 @@ resource "genesyscloud_auth_division" "DSRC_DEX_EST" {
 }
 
 resource "genesyscloud_auth_division" "DSRC_DEX_CENTRE_EST" {
-  name = "DSRC_DEX_CENTRE_ EST"
+  name = "DSRC_DEX_CENTRE_EST"
 }
 
 resource "genesyscloud_auth_division" "DSRC_DEX_SUD_EST" {
