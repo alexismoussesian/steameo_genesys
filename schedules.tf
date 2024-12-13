@@ -45,3 +45,10 @@ resource "genesyscloud_architect_schedules" "JF_1erMai" {
   name        = "JF_1erMai"
 }
 
+resource "genesyscloud_architect_schedules" "JF_1erJanvier" {
+  rrule       = "FREQ=YEARLY;BYMONTH=1;BYMONTHDAY=1"
+  start       = "2024-01-01T00:00:00.000000"
+  division_id = data.genesyscloud_auth_division.Home.id
+  end         = "2024-01-02T00:00:00.000000"
+  name        = "JF_1erJanvier"
+}
